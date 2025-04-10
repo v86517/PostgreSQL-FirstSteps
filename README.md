@@ -6,7 +6,9 @@
   gender varchar default 'female' not null ,\
   address varchar\
   );'
+  
 fsfasfdAFA
+
 alter table person add constraint ch_gender check ( gender in ('female','male') );
 
 insert into person values (1, 'Anna', 16, 'female', 'Moscow');
@@ -121,4 +123,4 @@ insert into person_order values (16,7, 4, '2022-01-05');
 insert into person_order values (17,8, 8, '2022-01-06');
 insert into person_order values (18,8, 14, '2022-01-07');
 insert into person_order values (19,9, 18, '2022-01-09');
-insert into person_order values (20,9, 6, '2022-01-10');'
+insert into person_order values (20,9, 6, '2022-01-10');
