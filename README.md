@@ -1,11 +1,13 @@
 # База данных для выполнения заданий
-' create table person\
-( id bigint primary key ,\
-  name varchar not null,\
-  age integer not null default 10,\
-  gender varchar default 'female' not null ,\
-  address varchar\
-  );'
+'''
+create table person  
+( id bigint primary key ,  
+  name varchar not null,  
+  age integer not null default 10,  
+  gender varchar default 'female' not null ,  
+  address varchar  
+  );
+  '''
   
 fsfasfdAFA
 
