@@ -1,5 +1,5 @@
-#База данных для выполнения заданий
-'''create table person\
+# База данных для выполнения заданий
+'''sql create table person\
 ( id bigint primary key ,\
   name varchar not null,\
   age integer not null default 10,\
