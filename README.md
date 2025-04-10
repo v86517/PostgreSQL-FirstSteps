@@ -1,5 +1,5 @@
 # База данных для выполнения заданий
-'''
+```
 create table person  
 ( id bigint primary key ,  
   name varchar not null,  
@@ -7,7 +7,7 @@ create table person
   gender varchar default 'female' not null ,  
   address varchar  
   );
-  '''
+  ```
   
 fsfasfdAFA
 
