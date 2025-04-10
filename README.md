@@ -21,52 +21,53 @@ insert into person values (7, 'Peter', 24, 'male', 'Saint-Petersburg');
 insert into person values (8, 'Nataly', 30, 'female', 'Novosibirsk');  
 insert into person values (9, 'Dmitriy', 18, 'male', 'Samara');  
 ```
-
-create table pizzeria
-(id bigint primary key ,
- name varchar not null ,
- rating numeric not null default 0);
-
-alter table pizzeria add constraint ch_rating check ( rating between 0 and 5);
-
-insert into pizzeria values (1,'Pizza Hut', 4.6);
-insert into pizzeria values (2,'Dominos', 4.3);
-insert into pizzeria values (3,'DoDo Pizza', 3.2);
-insert into pizzeria values (4,'Papa Johns', 4.9);
-insert into pizzeria values (5,'Best Pizza', 2.3);
+```
+create table pizzeria  
+(id bigint primary key ,  
+ name varchar not null ,  
+ rating numeric not null default 0);  
+```
+```alter table pizzeria add constraint ch_rating check ( rating between 0 and 5);```
+```
+insert into pizzeria values (1,'Pizza Hut', 4.6);  
+insert into pizzeria values (2,'Dominos', 4.3);  
+insert into pizzeria values (3,'DoDo Pizza', 3.2);  
+insert into pizzeria values (4,'Papa Johns', 4.9);  
+insert into pizzeria values (5,'Best Pizza', 2.3);  
 insert into pizzeria values (6,'DinoPizza', 4.2);
-
-
-create table person_visits
-(id bigint primary key ,
- person_id bigint not null ,
- pizzeria_id bigint not null ,
- visit_date date not null default current_date,
- constraint uk_person_visits unique (person_id, pizzeria_id, visit_date),
- constraint fk_person_visits_person_id foreign key  (person_id) references person(id),
- constraint fk_person_visits_pizzeria_id foreign key  (pizzeria_id) references pizzeria(id)
+```
+```
+create table person_visits  
+(id bigint primary key ,  
+ person_id bigint not null ,  
+ pizzeria_id bigint not null ,  
+ visit_date date not null default current_date,  
+ constraint uk_person_visits unique (person_id, pizzeria_id, visit_date),  
+ constraint fk_person_visits_person_id foreign key  (person_id) references person(id),  
+ constraint fk_person_visits_pizzeria_id foreign key  (pizzeria_id) references pizzeria(id)  
  );
-
-insert into person_visits values (1, 1, 1, '2022-01-01');
-insert into person_visits values (2, 2, 2, '2022-01-01');
-insert into person_visits values (3, 2, 1, '2022-01-02');
-insert into person_visits values (4, 3, 5, '2022-01-03');
-insert into person_visits values (5, 3, 6, '2022-01-04');
-insert into person_visits values (6, 4, 5, '2022-01-07');
-insert into person_visits values (7, 4, 6, '2022-01-08');
-insert into person_visits values (8, 5, 2, '2022-01-08');
-insert into person_visits values (9, 5, 6, '2022-01-09');
-insert into person_visits values (10, 6, 2, '2022-01-09');
-insert into person_visits values (11, 6, 4, '2022-01-01');
-insert into person_visits values (12, 7, 1, '2022-01-03');
-insert into person_visits values (13, 7, 2, '2022-01-05');
-insert into person_visits values (14, 8, 1, '2022-01-05');
-insert into person_visits values (15, 8, 2, '2022-01-06');
-insert into person_visits values (16, 8, 4, '2022-01-07');
-insert into person_visits values (17, 9, 4, '2022-01-08');
-insert into person_visits values (18, 9, 5, '2022-01-09');
+```
+```
+insert into person_visits values (1, 1, 1, '2022-01-01');  
+insert into person_visits values (2, 2, 2, '2022-01-01');  
+insert into person_visits values (3, 2, 1, '2022-01-02');  
+insert into person_visits values (4, 3, 5, '2022-01-03');  
+insert into person_visits values (5, 3, 6, '2022-01-04');  
+insert into person_visits values (6, 4, 5, '2022-01-07');  
+insert into person_visits values (7, 4, 6, '2022-01-08');  
+insert into person_visits values (8, 5, 2, '2022-01-08');  
+insert into person_visits values (9, 5, 6, '2022-01-09');  
+insert into person_visits values (10, 6, 2, '2022-01-09');  
+insert into person_visits values (11, 6, 4, '2022-01-01');  
+insert into person_visits values (12, 7, 1, '2022-01-03');  
+insert into person_visits values (13, 7, 2, '2022-01-05');  
+insert into person_visits values (14, 8, 1, '2022-01-05');  
+insert into person_visits values (15, 8, 2, '2022-01-06');  
+insert into person_visits values (16, 8, 4, '2022-01-07');  
+insert into person_visits values (17, 9, 4, '2022-01-08');  
+insert into person_visits values (18, 9, 5, '2022-01-09');  
 insert into person_visits values (19, 9, 6, '2022-01-10');
-
+```
 
 create table menu
 (id bigint primary key ,
