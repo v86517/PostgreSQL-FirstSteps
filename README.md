@@ -1,12 +1,12 @@
 # База данных для выполнения заданий
-'''sql create table person\
+' create table person\
 ( id bigint primary key ,\
   name varchar not null,\
   age integer not null default 10,\
   gender varchar default 'female' not null ,\
   address varchar\
-  );'''
-
+  );'
+fsfasfdAFA
 alter table person add constraint ch_gender check ( gender in ('female','male') );
 
 insert into person values (1, 'Anna', 16, 'female', 'Moscow');
